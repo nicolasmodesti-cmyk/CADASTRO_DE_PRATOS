@@ -1,16 +1,18 @@
-IF NOT EXIST CREATE DATABASE menu_db
-USE menu_db
+CREATE DATABASE IF NOT EXISTS menu_db;
+USE menu_db;
 
-CREATE TABLE cadastros
-cadastroId int(20) AUTO_INCREMENT PRIMARY KEY,
-cadastroNome varchar(50),
-cadastroEmail varchar(50);
+CREATE TABLE cadastros (
+    cadastroId INT AUTO_INCREMENT PRIMARY KEY,
+    cadastroNome VARCHAR(50) NOT NULL,
+    cadastroEmail VARCHAR(50) NOT NULL
+);
 
-CREATE TABLE pratos
-pratoId int(20) AUTO_INCREMENT PRIMARY KEY,
-pratoNome varchar(50),
-pratoValor int(20),
-pratoDescrição varchar(150),
-pratoCategoria varchar(50),
-FOREIGN KEY (cadastroId) REFERENCES cadastros(cadastroId),
-FOREIGN KEY (cadastroNome) REFERENCES cadastros(cadastroNome);
+CREATE TABLE pratos (
+    pratoId INT AUTO_INCREMENT PRIMARY KEY,
+    pratoNome VARCHAR(50) NOT NULL,
+    pratoValor DECIMAL(10,2) NOT NULL,
+    pratoDescricao VARCHAR(150),
+    pratoCategoria VARCHAR(50),
+    cadastroId INT,
+    FOREIGN KEY (cadastroId) REFERENCES cadastros(cadastroId) ON DELETE CASCADE
+);

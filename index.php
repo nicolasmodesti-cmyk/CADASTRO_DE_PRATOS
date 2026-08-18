@@ -13,7 +13,7 @@ include "infra/conexao.php"
 <body>
     <h1>Hey kiddo</h1>
     <main>
-
+        <form action=""></form>
     </main>
 </body>
 </html>
