@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "livraria_icaro_m2";
+$banco = "menu_db";
 $port = 6608;
 
 $conexao = new mysqli($host, $usuario, $senha, $banco,$port);
