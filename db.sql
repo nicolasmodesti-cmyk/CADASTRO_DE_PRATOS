@@ -1,0 +1,4 @@
+IF NOT EXIST CREATE DATABASE menu_db
+USE menu_db
+CREATE TABLE pratos
+CREATE TABLE cadastros
