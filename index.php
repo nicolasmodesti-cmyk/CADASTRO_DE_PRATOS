@@ -48,6 +48,7 @@ include "infra/conexao.php"
             <br>
             <button type="submit">Cadastrar</button>
         </form>
+        
     </main>
 </body>
 </html>
